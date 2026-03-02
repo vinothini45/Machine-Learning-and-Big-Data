@@ -1,0 +1,42 @@
+# Spark Configuration File
+# Used for Distributed Big Data Processing
+
+spark:
+  app_name: "AmazonReviewsBigDataProject"
+
+  executor:
+    memory: "4g"
+    cores: 2
+    instances: 2
+
+  driver:
+    memory: "4g"
+
+  sql:
+    shuffle_partitions: 200
+    auto_broadcast_join_threshold: "50MB"
+
+  serialization:
+    serializer: "org.apache.spark.serializer.KryoSerializer"
+
+  performance:
+    cache_enabled: true
+    checkpoint_enabled: false
+
+  scalability_testing:
+    partition_tests:
+      - 100
+      - 200
+      - 400
+    dataset_sizes:
+      - 500000
+      - 1000000
+      - 1500000
+
+  storage:
+    format: "parquet"
+    compression: "snappy"
+
+logging:
+  level: "WARN"
+  enable_event_log: false

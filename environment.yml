@@ -1,0 +1,17 @@
+name: bigdata-ml-project
+channels:
+  - defaults
+  - conda-forge
+
+dependencies:
+  - python=3.10
+  - pyspark=3.5.1
+  - pandas
+  - scikit-learn
+  - pyarrow
+  - pyyaml
+  - matplotlib
+  - seaborn
+  - pip
+  - pip:
+      - datasets

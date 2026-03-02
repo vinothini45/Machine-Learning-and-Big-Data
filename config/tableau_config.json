@@ -1,0 +1,42 @@
+{
+  "project_name": "Amazon Reviews Big Data ML Project",
+  "data_source": "McAuley-Lab/Amazon-Reviews-2023",
+  "extract_settings": {
+    "file_format": "CSV",
+    "compression": "None",
+    "encoding": "UTF-8",
+    "extract_type": "Hyper Extract"
+  },
+  "dashboards": [
+    {
+      "name": "Data Quality Overview",
+      "description": "Displays rating distribution and dataset health metrics.",
+      "data_source": "business_insights.csv"
+    },
+    {
+      "name": "Model Performance Comparison",
+      "description": "Compares accuracy and F1 scores across models.",
+      "data_source": "model_performance.csv"
+    },
+    {
+      "name": "Confusion Matrix Analysis",
+      "description": "Heatmap visualization of prediction errors.",
+      "data_source": "confusion_matrix.csv"
+    },
+    {
+      "name": "Scalability Analysis",
+      "description": "Execution time vs shuffle partitions.",
+      "data_source": "scalability_results.csv"
+    }
+  ],
+  "interactive_features": {
+    "enable_filters": true,
+    "enable_parameters": true,
+    "lod_expressions": true,
+    "mobile_responsive": true
+  },
+  "business_metrics": {
+    "primary_metric": "Accuracy",
+    "secondary_metric": "F1 Score"
+  }
+}
